@@ -1,0 +1,62 @@
+/*
+use flexbox to build grid layout
+ */
+
+.grid {
+   display:flex;
+   width: 100%;
+   flex-wrap: wrap;
+
+   // for test use
+   & > div {
+
+   }
+
+  //  & > div:nth-child(1) {
+  //    margin-left: -1rem;
+  //  }
+
+    // flex items
+   & > .grid-grow {
+     flex-grow: 1;
+   }
+
+   & > .grid-shrink {
+     flex-shrink: 1;
+   }
+
+    // generate percentage width
+   @for $i from 1 through 12 {
+     & > .grid-cell-#{$i} {
+       width: percentage( $i / 12 )
+     }
+   }
+
+   //
+
+}
+
+
+
+// flex direction
+ .grid-column {
+   flex-direction: column;
+ }
+
+
+ /* 主轴 侧轴 */
+
+ .grid-main-end {
+   justify-content: flex-end;
+ }
+ .grid-main-center {
+   justify-content: center;
+ }
+
+
+ .grid-cross-center {
+   align-items: center;
+ }
+ .grid-cross-end {
+   align-items: flex-end;
+ }

@@ -7,7 +7,123 @@
   <title>flexbox实现</title>
   <link rel="stylesheet" href="styles/app.css">
 </head>
-<body>
-<h1>测试</h1>
+<body class="grid grid-column grid-cross-center">
+
+  <section class="text-align-center">
+    <h1>QUARK v0.0.1</h1>
+    <p>pure css</p>
+    <p>flexbox grid layout system -- full take advantage of flexbox</p>
+    <p>Maybe follow BEM naming way</p>
+    <img src="https://img.shields.io/badge/layout-flexbox-brightgreen.svg?style=flat-square" alt="">
+    <img src="https://img.shields.io/badge/compatibility-%3EIE9-brightgreen.svg?style=flat-square" alt="">
+    <p>RULES TODO: font-size, margin, padding, color, line-height</p>
+  </section>
+
+  <section class="container ">
+
+    <h2>Small example</h2>
+    <div class="grid bg">
+      <div class="grid-grow">1</div>
+      <div class="grid-grow">2</div>
+    </div>
+
+    <h2>Percentage 50</h2>
+    <div class="grid bg">
+      <div class="grid-cell-6">1 : magin take up width</div>
+      <div class="grid-cell-6">2</div>
+    </div>
+
+    <h2>Flexible child node</h2>
+    <div class="grid bg">
+      <div class="grid-grow">1</div>
+      <div class="grid-grow">2</div>
+      <div class="grid-grow">3</div>
+      <div class="grid-grow">4</div>
+      <div class="grid-grow grid-cell-6">5</div>
+      <div class="grid-grow grid-cell-6">6 : flex-grow will take up width</div>
+      <div class="grid-cell-6">6 : no use grow</div>
+    </div>
+
+    <h2>Content decide width： grow || shrink</h2>
+    <div class="grid bg">
+      <div class="grid-shrink">1</div>
+      <div class="grid-shrink">2</div>
+      <div class="grid-shrink">3</div>
+      <div class="grid-shrink">4</div>
+      <div class="grid-shrink grid-cell-6">5 ： 50%</div>
+      <div class="grid-shrink grid-cell-6">6 : flex-grow will take up one size width</div>
+      <div class="grid-cell-6">6 :  no use grow</div>
+    </div>
+
+    <h2>Fixed width percentage</h2>
+    <p>12 grid system</p>
+    <div class="grid grid-column bg">
+      <div class="grid-cell-1">1</div>
+      <div class="grid-cell-2">2</div>
+      <div class="grid-cell-3">3</div>
+      <div class="grid-cell-4">4</div>
+      <div class="grid-cell-5">5</div>
+      <div class="grid-cell-6">6</div>
+      <div class="grid-cell-7">7</div>
+      <div class="grid-cell-8">8</div>
+      <div class="grid-cell-9">9</div>
+      <div class="grid-cell-10">10</div>
+      <div class="grid-cell-11">11</div>
+      <div class="grid-cell-12">12</div>
+    </div>
+      <div class="grid grid-column grid-cross-end bg">
+      <div class="grid-cell-1">1</div>
+      <div class="grid-cell-2">2</div>
+      <div class="grid-cell-3">3</div>
+      <div class="grid-cell-4">4</div>
+      <div class="grid-cell-5">5</div>
+      <div class="grid-cell-6">6</div>
+      <div class="grid-cell-7">7</div>
+      <div class="grid-cell-8">8</div>
+      <div class="grid-cell-9">9</div>
+      <div class="grid-cell-10">10</div>
+      <div class="grid-cell-11">11</div>
+      <div class="grid-cell-12">12</div>
+    </div>
+
+    <h2> Wrap Center [content width] </h2>
+    <div class="grid grid-cross-center bg">
+      <div class="grid-cell-2">This cell should be top-aligned.</div>
+      <div class="grid-cell-7">Pellentesque sagittis vel erat ac laoreet. Phasellus ac aliquet enim, eu aliquet sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar porta leo, eu ultricies nunc sollicitudin vitae. Curabitur pulvinar dolor lectus, quis porta turpis ullamcorper nec. Quisque eget varius turpis, quis iaculis nibh.</div>
+      <div class="grid-cell-4">This cell should be top-aligned.</div>
+      <div class="grid-cell-2">This cell should be top-aligned.</div>
+      <div class="grid-cell-6">Pellentesque sagittis vel erat ac laoreet. Phasellus ac aliquet enim, eu aliquet sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar porta leo, eu ultricies nunc sollicitudin vitae. Curabitur pulvinar dolor lectus, quis porta turpis ullamcorper nec. Quisque eget varius turpis, quis iaculis nibh.</div>
+      <div class="grid-cell-5">This cell should be top-aligned.</div>
+    </div>
+
+    <h2> Wrap Stretch</h2>
+    <div class="grid bg">
+      <div class="grid-cell-2">This cell should be top-aligned.</div>
+      <div class="grid-cell-7">Pellentesque sagittis vel erat ac laoreet. Phasellus ac aliquet enim, eu aliquet sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar porta leo, eu ultricies nunc sollicitudin vitae. Curabitur pulvinar dolor lectus, quis porta turpis ullamcorper nec. Quisque eget varius turpis, quis iaculis nibh.</div>
+      <div class="grid-cell-4">This cell should be top-aligned.</div>
+      <div class="grid-cell-2">This cell should be top-aligned.</div>
+      <div class="grid-cell-6">Pellentesque sagittis vel erat ac laoreet. Phasellus ac aliquet enim, eu aliquet sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar porta leo, eu ultricies nunc sollicitudin vitae. Curabitur pulvinar dolor lectus, quis porta turpis ullamcorper nec. Quisque eget varius turpis, quis iaculis nibh.</div>
+      <div class="grid-cell-5">This cell should be top-aligned.</div>
+    </div>
+
+    <h2>One child node to center</h2>
+    <div class="grid grid-main-center bg">
+      <div class=" grid-cell-5">API : to differ parent and child</div>
+    </div>
+    <div class="grid grid-main-center bg">
+      <div class=" grid-cell-7">2</div>
+    </div>
+    <div class="grid grid-main-center bg">
+      <div class=" grid-cell-3">3</div>
+    </div>
+
+    <h2>Multiple child center</h2>
+    <div class="grid grid-main-center bg">
+      <div class=" grid-cell-5">1</div>
+      <div class=" grid-cell-5">2</div>
+      <div class=" grid-cell-5">3</div>
+    </div>
+
+    </section>
 </body>
 </html>

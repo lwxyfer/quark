@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* quark normalize based on normalize.css*/
 /* normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -339,12 +340,121 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-h1 {
-  color: springgreen; }
-
-p {
-  background: #0982c1; }
+/*
+global varibale:
+*/
+html {
+  width: 100%;
+  font-size: 10px; }
 
 body {
-  background: springgreen;
-  springgreen: #000; }
+  font-family: "微软雅黑";
+  width: 100%;
+  font-size: 1.6rem; }
+
+* {
+  box-sizing: border-box; }
+
+p {
+  font-size: 1.6rem; }
+
+.container {
+  max-width: 1200px; }
+
+/*
+use flexbox to build grid layout
+ */
+.grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .grid > .grid-grow {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+  .grid > .grid-shrink {
+    -ms-flex-negative: 1;
+        flex-shrink: 1; }
+  .grid > .grid-cell-1 {
+    width: 8.33333%; }
+  .grid > .grid-cell-2 {
+    width: 16.66667%; }
+  .grid > .grid-cell-3 {
+    width: 25%; }
+  .grid > .grid-cell-4 {
+    width: 33.33333%; }
+  .grid > .grid-cell-5 {
+    width: 41.66667%; }
+  .grid > .grid-cell-6 {
+    width: 50%; }
+  .grid > .grid-cell-7 {
+    width: 58.33333%; }
+  .grid > .grid-cell-8 {
+    width: 66.66667%; }
+  .grid > .grid-cell-9 {
+    width: 75%; }
+  .grid > .grid-cell-10 {
+    width: 83.33333%; }
+  .grid > .grid-cell-11 {
+    width: 91.66667%; }
+  .grid > .grid-cell-12 {
+    width: 100%; }
+
+.grid-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+/* 主轴 侧轴 */
+.grid-main-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+.grid-main-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.grid-cross-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center; }
+
+.grid-cross-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+              -ms-grid-row-align: flex-end;
+          align-items: flex-end; }
+
+/*
+For text : align, color, size and so on
+*/
+h1 {
+  font-size: 3rem; }
+
+h2 {
+  font-size: 2rem; }
+
+h3 {
+  font-size: 1.5rem; }
+
+.text-align-center {
+  text-align: center; }
+
+.bg {
+  background: #ececec;
+  padding: 1rem;
+  border-radius: 0.1rem; }
+
+.grid > div {
+  margin: 0.5rem;
+  background: #007FFF;
+  padding: 0.5rem;
+  color: #fff;
+  line-height: 2rem; }

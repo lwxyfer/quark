@@ -20,6 +20,7 @@ gulp.task('styles', function() {
     .pipe(autoprefixer())
     .pipe(gulp.dest(paths.dest))
     .pipe(bs.stream());
+  bs.reload()
 });
 
 gulp.task('dev', ['styles'], function() {
@@ -28,8 +29,8 @@ gulp.task('dev', ['styles'], function() {
       baseDir: "./dist"
     }
   });
-  gulp.watch("src/scss/app.scss", ['styles']);
-  gulp.watch("./*", function() {
+  gulp.watch("src/scss/*.scss", ['styles']);
+  gulp.watch("./dist/*.html", function() {
     bs.reload();
   });
 })

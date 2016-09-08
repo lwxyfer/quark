@@ -1,0 +1,36 @@
+/*
+global varibale:
+*/
+
+// global basic size
+html {
+  width:100%;
+  font-size: 10px;
+}
+body {
+  font-family: "微软雅黑";
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+p {
+  font-size: 1.6rem;
+}
+
+// font size
+// change this use media query:
+// $font-size: 1.6rem;
+
+
+// The box : margin padding
+
+
+// mobile pad pc
+$breakpoints: (
+  'small': (min-width: 800px),
+  'medium': (min-width: 1000px),
+  'large': (min-width: 1200px),
+);
