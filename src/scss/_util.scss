@@ -1,0 +1,10 @@
+// some useful function
+// ======================================================
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function to-deg($value) {
+  @return strip-unit($value) * 360deg;
+}

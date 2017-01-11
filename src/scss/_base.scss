@@ -1,0 +1,22 @@
+// base setting
+// =====================================================================
+
+// global basic size
+html {
+  font-size: 16px;
+}
+body {
+  font-size: $font-size;
+  font-family: $font-family;
+}
+
+
+article, aside, details,
+figcaption, figure, footer, header, main,
+menu, nav, section, summary {
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 200;
+}

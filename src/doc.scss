@@ -1,0 +1,24 @@
+// document style
+// ===============================================================
+
+
+.bg {
+  background: #ececec;
+  padding: 1rem;
+  border-radius: 0.1rem;
+}
+
+.container {
+  max-width:1200px;
+}
+
+.grid {
+
+  & > div {
+    margin: 0.5rem; // how to solve margin [each other]
+    background: #007FFF;
+    padding:0.5rem;
+    color: #fff;
+    line-height:2rem;
+  }
+}
